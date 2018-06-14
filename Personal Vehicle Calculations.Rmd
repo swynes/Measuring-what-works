@@ -9,13 +9,13 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-For all vehicles we take 258.32gCO2e/km as the life cycle emissions associated with an internal combustion vehicle, and for a lower range 196.79gCO2e/km as the life cycle emissions associated with an electric vehicle (Hawkins et al. 2013, SI)
+For all vehicles we take 260gCO2e/km as the life cycle emissions associated with an internal combustion vehicle, and for a lower range 180gCO2e/km as the life cycle emissions associated with an electric vehicle, using the European electrical mix rather than assuming coal or natural gas to ensure that this provided a lower range estimate (Hawkins et al. 2013, SI - corrigendum version)
 
 
 
 ```{r}
-ICV <- 0.25832
-EV <- 0.19679
+ICV <- 0.260
+EV <- 0.180
 ```
 
 
@@ -35,6 +35,7 @@ Now repeat for all categories, subtracting the distance of the control group.
 
 ```{r}
 Charge <- 285-306-56
+Charge
 Charge*ICV*52
 Charge*EV*52
 Charge_plan <-271-291-56
@@ -47,13 +48,13 @@ Ext_charge_plan*EV*52
 
 ```
  Charge: 77 km reduced per week 
- (20kgCO2e/week or 1034kgCO2e reduced per year)
+ (1041kgCO2e reduced per year or 721 in an EV)
  
  Charge and plan: 76km reduced per week 
- (20kgCO2e/week or 1021kgCO2e/year)
+ (1027kgCO2e/year or 711 in an EV)
  
  Extended charge and plan: 64km reduced per week
- (17kgCO2e/week or 860kgCO2e/year)
+ (17kgCO2e/week or 865kgCO2e/year or 599 in an EV)
  
 "no signicant within-subjects effects could be found. None of the instruments caused a decrease in car use"
  
@@ -65,7 +66,7 @@ Telecenters are made available and used roughly once per work week (1.25/5) by t
 35.2*1.609*1.25*48*ICV #Convert to km, multiply by times used per week and assume a 48 week work year
 35.2*1.609*1.25*48*EV #Emissions for an electric vehicle
 ```
-This would reduce emissions by 877.8kgCO2e/year in an ICV or 668.7kgCO2e/year in an EV. Not significant.The authors state, "A reasonable inference from the evidence to date is that the data are exhibitng random fluctuations around an average of no change".
+This would reduce emissions by 883.5kgCO2e/year in an ICV or 611.7kgCO2e/year in an EV. Not significant.The authors state, "A reasonable inference from the evidence to date is that the data are exhibitng random fluctuations around an average of no change".
 
 
 
@@ -79,7 +80,7 @@ We assume one day of teleconferencing per week and a 48 week work year.
 40.5*1.609*48*EV #Annual emissions in an EV
 ```
 
-This intervention would be expected to reduce emissions by 808.0kgCO2e/year for an ICV and 615.5kgCo2e in an EV
+This intervention would be expected to reduce emissions by 813.3kgCO2e/year for an ICV and 563.0kgCo2e in an EV
  
  
  
@@ -102,9 +103,9 @@ Control<-0.994*1.609*7 #To find km per week of control group
 Control
 ```
 
-VMT intervention reduces kilometers travelled per day by 2.996 or 20.97km/week (282.50kgCO2e/year or 215.19 in an EV)
+VMT intervention reduces kilometers travelled per day by 2.996 or 20.97km/week (284.32kgCO2e/year or 196.83 in an EV)
 
-PH intervention reduces kilometers travelled per day by 6.609 or 46.27km/week (623.31kgCO2e/year or 474.78 in an EV)
+PH intervention reduces kilometers travelled per day by 6.609 or 46.27km/week (627.27kgCO2e/year or 434.26 in an EV)
 
 
 
@@ -121,7 +122,7 @@ Eight firms give option of cashing out parking spaces to employees. Measured inc
 1050*ICV
 1050*EV
 ```
-By our calculations, emissions would decrease 271.24kgCO2e/year (or 206.63 in EV)
+By our calculations, emissions would decrease 273kgCO2e/year (or 189 in EV)
 
 
 
@@ -149,9 +150,9 @@ EC-N #Decrease of 82km over 2 weeks compared to N
 (EC-N)/2*52*EV 
 
 ```
-Environmental feedback reduced km driven by 42km over two weeks (compared to no feedback) or 175kgCO2e/year (133 in EV) (not significant)
-Cost feedback reduced km driven by 8km over two weeks or 54kgCO2e/year (41 in EV) (not significant)
-Environmental and cost feedback reduced km driven by 82km over two weeks or 551kgCO2e/year (419 in EV) (not significant)
+Environmental feedback reduced km driven by 42km over two weeks (compared to no feedback) or 176kgCO2e/year (122 in EV) (not significant)
+Cost feedback reduced km driven by 8km over two weeks or 54kgCO2e/year (37 in EV) (not significant)
+Environmental and cost feedback reduced km driven by 82km over two weeks or 554kgCO2e/year (384 in EV) (not significant)
 
 
 
