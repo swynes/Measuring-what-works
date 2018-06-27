@@ -3,6 +3,8 @@ Personal Vehicle Calculations
 Seth Wynes
 June 6, 2018
 
+\*\*ASSUMPTIONS
+
 For all vehicles we take 260gCO2e/km as the life cycle emissions associated with an internal combustion vehicle, and for a lower range 180gCO2e/km as the life cycle emissions associated with an electric vehicle, using the European electrical mix rather than assuming coal or natural gas to ensure that this provided a lower range estimate (Hawkins et al. 2013, SI - corrigendum version)
 
 ``` r
@@ -78,22 +80,6 @@ Extended charge and plan: 64km reduced per week (17kgCO2e/week or 865kgCO2e/year
 
 "no signicant within-subjects effects could be found. None of the instruments caused a decrease in car use"
 
-\*\*MOKHTARIAN & VARMA 1998 NOTE: Excluded from results as this is a structural intervention. Telecenters are made available and used roughly once per work week (1.25/5) by the treatment group generating a reduction in total VMT of 35.2 on those days.
-
-``` r
-35.2*1.609*1.25*48*ICV #Convert to km, multiply by times used per week and assume a 48 week work year
-```
-
-    ## [1] 883.5341
-
-``` r
-35.2*1.609*1.25*48*EV #Emissions for an electric vehicle
-```
-
-    ## [1] 611.6774
-
-This would reduce emissions by 883.5kgCO2e/year in an ICV or 611.7kgCO2e/year in an EV. Not significant.The authors state, "A reasonable inference from the evidence to date is that the data are exhibitng random fluctuations around an average of no change".
-
 \*\*PENDYALA ET AL. 1991 Travel diaries are used to compute reductions in distance travelled for a treatment group that telecomuted compared to control groups which did not. With the format of reported results it is difficult to know how to compute a difference in difference result and so we instead use a pre-post difference as this is how the authors report the change in the text. This amounts to a 40.5miles/day reduction (p&lt;0.05 reported).
 
 We assume one day of teleconferencing per week and a 48 week work year.
@@ -165,7 +151,7 @@ PH intervention reduces kilometers travelled per day by 6.609 or 46.27km/week (6
     ## [1] 7.057692
 
 ``` r
-#They also claim 1050vkt reduced per employee per year
+#They also claim 1050VKT reduced per employee per year
 1050*ICV
 ```
 
