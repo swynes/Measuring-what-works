@@ -3,7 +3,9 @@ Household\_calculations
 Wynes
 March 27, 2018
 
-Assumptions 1679.3lbs/MWh is the maximum emissions from a subregion in the US while 295.9lbs/MWh is the minimum, and the US overall is 1004.2 lbs/MWh (eGRID2016 SUMMARY). We take this as reasonable upper and lower ranges for energy intensity. We therefore use an average intensity of 0.455kgCO2e/kWh maximum intensity of 0.762kgCO2e/kWh and a minimum of 0.134kgCO2e/kWh
+\*\*Assumptions 1679.3lbs/MWh is the maximum emissions from a subregion in the US while 295.9lbs/MWh is the minimum, and the US overall is 1004.2 lbs/MWh (eGRID2016 SUMMARY). We take this as reasonable upper and lower ranges for energy intensity.
+
+We therefore use an average intensity of 0.455kgCO2e/kWh maximum intensity of 0.762kgCO2e/kWh and a minimum of 0.134kgCO2e/kWh
 
 ``` r
 max_int <- 0.762
@@ -56,7 +58,7 @@ pump_rebate*avg_int
 
 The energy audit therefore leads to savings of 409.5kgCO2e/year range of 120.6-685.8kgCO2e/year (p&lt;0.05) The pump rebate leads to savings of 477.8kgCO2e/year range of 140.7-800.1kg/year (p&lt;0.01)
 
-ALLCOTT 2011
+\*\*ALLCOTT 2011
 
 A treatment group is mailed feedback with a peer comparison, injunctive norm and tips on conservation while the control is not mailed anything. The average treatment effect is 2% or 0.62KWh reduced per day. The average treatment effects are described as significant, but there is nuance shown in Section 3.2 and Table 3 as many different experiments were run.
 
@@ -129,7 +131,7 @@ Health*365*avg_int
 
 The monetary group increases energy by 0.3kWh/day or 13.9-78.8kgCO2e increased per year. The Health group decreases energy use by 0.6kWh/day or 29.9-170.1kgCO2e decreased per year.
 
-\*\*AYRES ET AL. 2012
+\*\*AYRES ET AL. 2013
 
 In the SMUD group the intervention group is given peer feedback and normative messages (smiley faces for low energy usage). They estimate savings of 187.20KWh per year
 
@@ -183,7 +185,7 @@ heat_saved <- 10.14*0.0053*1000 #Using 0.0053metric tons CO2 per therm (https://
 
 Therefore reductions of 117.83kgCO2e/year or a range of 72.62-161.07CO2e/year. There are different levels of significance for different periods of time and for the therms (heat saved) and for the kWh saved in this intervention. More weeks were significant than not for both therms and kWh.
 
-BEKKER 2010
+\*\*BEKKER ET AL. 2010
 
 A treatment university residence hall received daily feedback and rewards and is compared to a control hall. The treatment hall had 190 students in single occupancy rooms, heating, hot water were not included and cooling systems were not present. Over three weeks the intervention hall saved 3700.31kWh.
 
@@ -276,19 +278,13 @@ MST saves 27.45kgCO2e/year or from 8.08-45.97kgCO2e per year (significant at p&l
 
 COSTA & KAHN 2013
 
-The treatment group used an average of 30.801KWh/day The overall treatment effect is 2.1% (\#\#I AM CONFIDENT BUT CHECK THAT I HAVE INTERPRETED THE REGRESSION CORRECTLY. The text in the results supports my analyis but the title of log(Mean kWh) is strange in Table 3\#\#) Significance at p&lt;0.05
+The treatment group used an average of 30.801KWh/day The overall treatment effect is 2.1% Significance at p&lt;0.05
 
 ``` r
 0.021*30.801
 ```
 
     ## [1] 0.646821
-
-``` r
-0.021*30.801*7
-```
-
-    ## [1] 4.527747
 
 ``` r
 0.021*30.801*356*max_int
@@ -355,11 +351,7 @@ Private information reduces energy use by 441.692Wh/day Public information reduc
 
 The private feedback results in 73.35kgCO2e or a range of 21.60-122.85kgCO2e reduced per year (not significant) The public feedback results in 249.84kgCO2e/year or range of 73.58-418.41kgCO2e reduced per year (p&lt;0.05)
 
-EMEAKAROHA 2014 8 experimental residences compared to 8 control residences, each with n=112 students
-
-Non-experimental Hall (NEH): baseline average of 138.22KWh, Week 6 average of 144.30KWh per hall Experimental Hall (EH): baseline of ?? (individual halls don't add up to average and therefore excluded)
-
-GLEERUP ET AL. 2010 - CHECK INTERPRETATION OF PAPER (regression etc.) WITH A COLLEAGUE Gleerup et al. have three treatment groups. They only explicitly report KWh in the text for the third treatment group (the first treatment group was subject to some technical errors so I have chosen to exclude regardless) which is what I report here although possibly we could report the second treatment group as well by using calculations from their regression results. They report 135KWh reductions in treatment 3.
+GLEERUP ET AL. 2010 - Gleerup et al. have three treatment groups. They only explicitly report KWh in the text for the third treatment group (the first treatment group was subject to some technical errors so we have excluded regardless) which is what we report here. They report 135kWh reductions in treatment 3.
 
 ``` r
 135*min_int
@@ -379,9 +371,9 @@ GLEERUP ET AL. 2010 - CHECK INTERPRETATION OF PAPER (regression etc.) WITH A COL
 
     ## [1] 61.425
 
-Therefore CO2e reductions are 61.43kgCO2e/year or range from 18.09-102.87kgCO2e/year (not significant)
+Therefore CO2e reductions are 61.43kgCO2e/year or range from 18.09-102.87kgCO2e/year (not significant).
 
-GRONHOJ & THOGERSEN 2011 Electricity usage decreased from 5584KWh to 5133KWh in the treatment group (8.1% decrease). The control group however decreased consumption by a reported 0.8%. NOTE\* In an apparent contradiction the authors later report savings of 0.7% by the control group in the conclusion. Here we subtract the reductions made by the treatment group from that of the control group, using the 0.8% value given which results in more conservative savings for the treatment group.
+\*\*GRONHOJ & THOGERSEN 2011 Electricity usage decreased from 5584KWh to 5133KWh in the treatment group (8.1% decrease). The control group however decreased consumption by a reported 0.8%. NOTE\* In an apparent contradiction the authors later report savings of 0.7% by the control group in the conclusion. Here we subtract the reductions made by the treatment group from that of the control group, using the 0.8% value given which results in more conservative savings for the treatment group.
 
 ``` r
 #8.1-0.8=7.3% reduction
@@ -410,7 +402,7 @@ GRONHOJ & THOGERSEN 2011 Electricity usage decreased from 5584KWh to 5133KWh in 
 
 Therefore the intervention reduced electricty consumption by 407.63KWh This would result in reductions of 185.47kgCO2e/year or a range of 54.62-310.62kgCO2e per year
 
-HERTER ET AL. 2013
+\*\*HERTER ET AL. 2013
 
 Treatment 1 (Baseline) given a home energy assessment, treatment 2 (Home) was also given feedback on energy use while Treatment 3 (Appliance) was also given feedback on energy use and appliance level information. No data is provided on change in the control group except that the change in the group was insignificant. We therefore only use change from previous year's consumption, adjusted by weather, as provided in Table 3. Table 3 says, "All impacts are statistically significant (p&lt;0.01)"
 
@@ -418,7 +410,7 @@ Baseline: -0.07KW Home: -0.12KW Appliance: -0.07KW
 
 ``` r
 #Baseline
-0.07*24
+0.07*24 #multiply by 24 hours in a day
 ```
 
     ## [1] 1.68
@@ -471,7 +463,7 @@ Note that as aspects of this intervention are specifically related to summer (ad
 
 \*\*HOUDE ET AL. 2013
 
-Authors report that the treatment effect is 0.05KWh per hour.
+Authors report that the treatment effect is 0.05kWh per hour.
 
 ``` r
 0.05*24*365*min_int #Find annual emissions saved
@@ -493,9 +485,9 @@ Authors report that the treatment effect is 0.05KWh per hour.
 
 Annual remissions reductions are therefore 199kgCO2e/year or a range of 59-334kgCO2e/year (significant at the 5% level) though authors report diminishing returns over time.
 
-JENSEN ET AL. 2012
+\*\*JENSEN ET AL. 2012
 
-Treatment group (Treated) received an autopoweroff plug in the mail. Control group (Untreated) did not.
+Treatment group (Treated) received an autopoweroff plug in the mail. Control group (Untreated) did not. The simplest approach is as follows:
 
 ``` r
 Untreated <- 9.175-8.005 #Mean kWh/day during pre and post periods taken from Table 2
@@ -521,9 +513,7 @@ Treated*365*max_int
 
 The treatment reduces energy by 0.117KWh/day, or 5.72-32.54kgCO2e per year
 
-CONVERSELY
-
-Using their calculations for propensity score matching we have a treatment applied to four different populations: single male (150KWh reduced per year), single female (0KWh reduced per year), no children (225KWh reduced per year), children (0KWh reduced per year). It's reasonable to split them up because part of the logic of the paper is that interventions should be targeted at receptive populations. Furthermore in this anaylsis the authors controlled for household characteristics, making the results more rigorous.
+However, using their calculations for propensity score matching we have a treatment applied to four different populations: single male (150KWh reduced per year), single female (0KWh reduced per year), no children (225KWh reduced per year), children (0KWh reduced per year). It's reasonable to split up these groups because part of the logic of the paper is that interventions should be targeted at receptive populations. Furthermore in this part of the anaylsis the authors controlled for household characteristics, making the results more rigorous. We therefore use the calculations below:
 
 ``` r
 150*min_int
@@ -563,7 +553,7 @@ Using their calculations for propensity score matching we have a treatment appli
 
 Single males reduce 68.3kgCO2e/year or a range of 20.1-114.3kgCO2e/year (p&lt;0.05) Families with children reduce 102.4kgCO2e/year or a range of 30.15-171.45kgCO2e/year (p&lt;0.05) Single females and families with children reduce 0kgCO2e/year (not significant)
 
-MARTIN & RIVERS 2018
+\*\*MARTIN & RIVERS 2018
 
 Natural experiment where rollout of a feedback device is staggered by a utility company. The group of households who requested a device but have not yet received it act as a control and those who receive it act as a treatment . They find 3.1% reduction of the 1.2KWh per hour in the treatment group compared to the control group (a few other values for average KWh are provided - we take the most conservative).
 
@@ -617,7 +607,7 @@ The treatment group was provided with IHD devices for electricity monitoring (no
 
 Emissions savings per year estimated at 8.80kgCO2e/year or a range of 2.59-14.74kgCO2e/year
 
-NILSSON ET AL. 2014
+\*\*NILSSON ET AL. 2014
 
 Two studies. In study 1 the treatment group received an in-house display (IHD feedback device) and control group did not. Both groups received information on how to reduce electricity, which means the effect of the treatment group is slightly reduced as the control had a type of intervention (albeit a less effective one).
 
@@ -680,7 +670,7 @@ Nilsson_Control2 <- 301.1 - 290.9
 
 The treatment group INCREASED electricity usage by 15.6KWh per month or 85.18kgCO2e/year or range of 25.08-142.65kgCO2e increase per year (NOT significant)
 
-OZAWA ET AL. 2017 Tailored information/feedback is provided to households grouped according to three types of household energy consumption. One could frame the effect of this intervention as the effect of three unique interventions on three unique audiences or the effect of a single treatment consisting of three targeted interventions. We have chosen the latter. Additionally, the authors describe the presence of the boomerang effect, where households who are below average consumption levels increase consumption after finding out their relative standing, even though a normative encouragement is provided. The authors, report their results with this effect removed. We calculate the results both with and without the boomerang effect. Neither result is significant.
+\*\*OZAWA ET AL. 2017 Tailored information/feedback is provided to households grouped according to three types of household energy consumption. One could frame the effect of this intervention as the effect of three unique interventions on three unique audiences or the effect of a single treatment consisting of three targeted interventions. We have chosen the latter. Additionally, the authors describe the presence of the boomerang effect, where households who are below average consumption levels increase consumption after finding out their relative standing, even though a normative encouragement is provided. The authors, report their results with this effect removed. We calculate the results both with and without the boomerang effect. Neither result is significant.
 
 With boomerang effect: 0.067KWh/day increase (Table 3) Without boomerang effect: 0.382KWh/day decrease (Table 4)
 
@@ -720,7 +710,7 @@ With boomerang effect: 0.067KWh/day increase (Table 3) Without boomerang effect:
 
     ## [1] 63.44065
 
-This intervention can increase emissions by 11.13kgCO2e/year or range of 3.27-18.63kgCO2e/year if messages are sent to all consumers. Tailored intervention can decrease emissions by 63.44kgCO2e/year or range from 18.68-106.25kgCO2e/year if messages are not sent to households who consume below average levels of electricity.
+This intervention can INCREASE emissions by 11.13kgCO2e/year or range of 3.27-18.63kgCO2e/year if messages are sent to all consumers. Tailored intervention can decrease emissions by 63.44kgCO2e/year or range from 18.68-106.25kgCO2e/year if messages are not sent to households who consume below average levels of electricity.
 
 \*\*PETERSEN ET AL. 2007
 
@@ -752,7 +742,7 @@ This intervention can increase emissions by 11.13kgCO2e/year or range of 3.27-18
 
 Emissions saved are therefore estimated at 464kgCO2e with a range of 137-776kgCO2e/student per year
 
-SCHLEICH ET AL. 2013
+\*\*SCHLEICH ET AL. 2013
 
 The treatment group was offered either online or mailed paper feedback. Although the groups are randomized the researchers make use of a regression model to account for differences between the control and treatment group such as household size, and they report an annual decrease of 154KWh in the treatment group (p&lt;0.05).
 
@@ -776,7 +766,7 @@ The treatment group was offered either online or mailed paper feedback. Although
 
 The treatment reduces emissions by 70kgCO2e/year or range of 21-117kgCO2e per year.
 
-SCHULTZ ET AL. 2015 Three treatments are compared to a control: Feedback on energy use, feedback on energy use and cost, and feedback with a normative frame. Values are not provided in KWh for the three month mark, so we are not able to take the longest timeline. Statistics are provided for the one week value so we make use of that.
+SCHULTZ ET AL. 2015 Three treatments are compared to a control: Feedback on energy use, feedback on energy use and cost, and feedback with a normative frame. Values are not provided in kWh for the three month mark, so we are not able to take the longest timeline. Statistics are provided for the one week value so we make use of that.
 
 ``` r
 Schultz_cont <- 24.07-21.65 #Subtract week one from baseline
@@ -855,9 +845,9 @@ NormIHD - Schultz_cont
 
     ## [1] -373.6687
 
-The feedback treatment decreased consumption by 0.79KWh/day (not significant) or 131.2kgCO2e/year with a range of 38.6-219.7kgCO2e per year The cost treatment increased consumption by 0.45KWh/day (not significant) or 74.7kgCO2e with a range of 22.0-125.2kgCO2e per year The norm treatment decreased consumption by 2.25KWh/day (p&lt;0.05) or 373.7kgCO2e/year with a range of 110.0-625.8kgCO2e
+The feedback treatment decreased consumption by 0.79KWh/day (not significant) or 131.2kgCO2e/year with a range of 38.6-219.7kgCO2e per year The cost treatment INCREASED consumption by 0.45KWh/day (not significant) or 74.7kgCO2e with a range of 22.0-125.2kgCO2e per year The norm treatment decreased consumption by 2.25KWh/day (p&lt;0.05) or 373.7kgCO2e/year with a range of 110.0-625.8kgCO2e
 
-SCHULTZ ET AL. 2007
+\*\*SCHULTZ ET AL. 2007
 
 Peer comparison feedback is compared to peer comparison feedback with a normative injunctive message (smiley face). There is no proper control group with no intervention. All groups received tips on how to conserve energy and feedback. Additionally, the authors do not report significance between the two treatments, but between the baseline and the treatment period. This is problematic for our purposes as they do not account for changes in weather during the two periods. We make use of the difference between the full treatment and the partial treatment (as if partial treatment was a control) which is the most conservative method and will result in underestimations of the effect, but allows for control of the weather. Because the longer term change in usage was "calculated by subtracting the meter reading taken the day of the second message from the final meter reading" instead of using the original baseline, we rely only on the short term change.
 
@@ -905,7 +895,9 @@ full_low*52*avg_int
 
     ## [1] 15.379
 
-The full treatment resulted in 0.5KWh reductions over one week in the high users compared to the partial treatment or 11.8kgCo2e/year with a range of 3.5-19.8kgCO2e/year The full treatment resulted in 0.65KWh reductions over one week in the low users compared to the partial treatment or 15.4kgCO2e/year or range of 4.5-25.8kgCO2e/year Interpret with caution as this second group still had an overall increase in consumption compared to their baseline and there is no proper control.
+The full treatment resulted in 0.5KWh reductions over one week in the high users compared to the partial treatment or 11.8kgCo2e/year with a range of 3.5-19.8kgCO2e/year The full treatment resulted in 0.65KWh reductions over one week in the low users compared to the partial treatment or 15.4kgCO2e/year or range of 4.5-25.8kgCO2e/year
+
+Interpret with caution as this second group still had an overall increase in consumption compared to their baseline and there is no proper control.
 
 \*\*SENBEL ET AL. 2014
 
@@ -937,7 +929,7 @@ Feedback and competition used to decrease residential energy use at university r
 
 The treatment therefore reduced energy use by 0.13KWh/day per student or 22.02kgCO2e/year with a range of 6.49-36.88kgCO2e per year per student.
 
-SINTOV ET AL. 2016
+\*\*SINTOV ET AL. 2016
 
 The group competition reportedly reduced consumption in the 39 suites by 3158KWh over the three week intervention period (p&lt;0.01)
 
@@ -967,7 +959,7 @@ The group competition reportedly reduced consumption in the 39 suites by 3158KWh
 
 The intervention reduced energy usage by 26.99KWh/suite/week or 639kgCO2e or range from 188-1070kgCO2e per year (significant)
 
-SUDARSHAN 2017
+\*\*SUDARSHAN 2017
 
 "Inform\_Only" treatment group (n=119) received instructions and peer feedback and reduced energy by 3530.93KWh over 120 days (p&lt;0.1) while "Inform\_Incent" (n=233) received instructions, peer feedback and rewards but increased energy usage (710.83) over the same time.
 
@@ -1017,11 +1009,11 @@ Inform_Incent*365*avg_int
 
 The information only treatment group reduced energy use by 0.25KWh/day/household or 41.06kgCO2e/year with range of 12.09-68.77KgCO2e/year (p&lt;0.1)
 
-The information and incentive group increases energy use by 0.03KWh/day and emissions by 4.22kgCO2e/year with range of 1.24-7.07kgCO2e/year
+The information and incentive group INCREASES energy use by 0.03KWh/day and emissions by 4.22kgCO2e/year with range of 1.24-7.07kgCO2e/year
 
-SUTER & SHAMMIN 2013
+\*\*SUTER & SHAMMIN 2013
 
-The authors report results after the first year using an econometric model. However the sample size for some treatment (three households in the treatment group Incentive+Thermo) is quite small, so we utilize only their pairwise comparison chart (Table 1) where n=24 and results are totalled over one year. These results are more conservative, no changes are significant relative to the control, whereas in the econometric model some changes are significant. We exclude the installation of attic insulation as no choice was given to the residents so this is purely a structural intervention.
+The authors report results after the first year using an econometric model. However the sample size for some treatments (three households in the treatment group Incentive+Thermo) is quite small, so we utilize only their pairwise comparison chart (Table 1) where n=24 and results are totalled over one year. These results are more conservative, no changes are significant relative to the control, whereas in the econometric model some changes are significant. We exclude the installation of attic insulation as no choice was given to the residents so this is purely a structural intervention.
 
 Control decreases natural gas by 0.64ccf/day Thermostat decreases natural gas by 0.06ccf/day Incentive decreases natural gas by 1.07ccf/day
 
@@ -1053,9 +1045,9 @@ Control decreases natural gas by 0.64ccf/day Thermostat decreases natural gas by
 
     ## [1] 833.7184
 
-The thermostat treatment increases energy use by 0.58ccf/day or 1124.55kgCO2 per year (not significant) The incentive treatment decreases energy use by 0.43ccf/day or 833.72kgCO2 per year (not significant)
+The thermostat treatment INCREASES energy use by 0.58ccf/day or 1124.55kgCO2 per year (not significant) The incentive treatment decreases energy use by 0.43ccf/day or 833.72kgCO2 per year (not significant)
 
-THONDHLANA & KUA 2016
+\*\*THONDHLANA & KUA 2016
 
 Two treatment groups for low income households: Full treatment (FT = pamphlets, feedback, personal instructions) and Partial Treatment (PT = pamphlets only). We use the difference between August and April for the following calculation (Table 3). Numbers are reported per capita but to make them comparable to other studies whose unit of analysis is the household, we multiply by the average household size of the full sample (four).
 
@@ -1115,7 +1107,7 @@ Thondhlana_control <- 4.81
 
 The partial treatment decreased usage by 5.17KWh/month per capita or 112.92KgCO2e/year with a range of 33.25-189.10kgCO2e/year (not significant) compared to the control The full treatment decreased usage by 19.69KWh/month per capita or 430.03kgCO2e/year with range of 126.65-720.18kgCO2e/year per household (significant P=0.000) compared to the control
 
-\*\*WILHITE & LING 1995 First treatment group received more frequent feedback, second group received more frequent feedback and their historical usage, and group three received frequent feedback, historical usage and energy saving tips. The three treatment groups all reduced energy use, but were not significantly different from one another and the authors lump them into one group for calculations.
+\*\*WILHITE & LING 1995 The first treatment group received more frequent feedback, second group received more frequent feedback and their historical usage, and group three received frequent feedback, historical usage and energy saving tips. The three treatment groups all reduced energy use, but were not significantly different from one another and the authors lump them into one group for calculations.
 
 Annual reductions of 1348kWh in the final year.
 
@@ -1139,9 +1131,9 @@ Annual reductions of 1348kWh in the final year.
 
 Emissions reductions estimated at 613kgCO2e/year with a range of 181-1027kgCO2e/year
 
-WILLIS ET AL. 2010
+\*\*WILLIS ET AL. 2010
 
-A shower alarm which goes off after 40L of water has been used was installed to reduce water consumption. The researchers measures changes in water consumption, but use these changes to estimate energy saved and suggest 602KWh per household are saved annually.
+A shower alarm (which goes off after 40L of water has been used) was installed to reduce water consumption. The researchers measures changes in water consumption, but use these changes to estimate energy saved and suggest 602KWh per household are saved annually.
 
 ``` r
 602*min_int
@@ -1163,11 +1155,11 @@ A shower alarm which goes off after 40L of water has been used was installed to 
 
 The treatment group reduces emissions by 274kgCO2e/year or range of 81-459kgCO2e/year. Reductions in water usage were significant (p&lt;0.0005 for shower volume reductions)
 
-XU ET AL. 2015
+\*\*XU ET AL. 2015
 
 The treatment group has IHD devices present in the house and the control group does not. No mention of significance or randomization and we assume a quasi-experimental setup.
 
-Treament group (with IHD): 91.0KwH per month Control group (without IHD): 100.1kWh per month
+Treament group (with IHD): 91.0kWH per month Control group (without IHD): 100.1kWh per month
 
 ``` r
 100.1-91.0 #Find energy saved per month
