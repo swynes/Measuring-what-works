@@ -3,7 +3,7 @@ Diet calculations
 Wynes
 March 4, 2018
 
-Food calculations use life cycle emissions as presented in Heller et al. (2013). For instance, beef is 29kgCO2e/kg beef or Hoolohan (2013)
+Food calculations use life cycle emissions as presented in Heller et al. (2013) or Hoolohan et al. (2013). For instance, beef is 29kgCO2e/kg.
 
 \*\*ABRAHAMSE ET AL. 2007
 
