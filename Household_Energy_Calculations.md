@@ -278,7 +278,7 @@ MST saves 27.45kgCO2e/year or from 8.08-45.97kgCO2e per year (significant at p&l
 
 COSTA & KAHN 2013
 
-The treatment group used an average of 30.801KWh/day The overall treatment effect is 2.1% Significance at p&lt;0.05
+The treatment group used an average of 30.801KWh/day The overall treatment effect is 2.1% Significance at p&lt;0.01
 
 ``` r
 0.021*30.801
