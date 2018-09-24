@@ -2,7 +2,7 @@
 title: "Diet calculations"
 author: "Wynes"
 date: "Sept 23, 2018"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
