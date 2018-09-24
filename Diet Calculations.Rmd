@@ -156,8 +156,6 @@ mean_random*52
 The random information group increased beef consumption by 23.57g/week
                             increased co2e by 478.88g/week or 24.72kgCO2e/year
 
-
-
 Only the all information group changed by a significant amount compared to the control group (and it increased beef consumption).
 
 
