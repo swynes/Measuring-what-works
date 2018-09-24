@@ -164,7 +164,6 @@ Only the all information group changed by a significant amount compared to the c
 **Loy (2016)
 Information only (control) reduced consumption of meat by 27g at the second follow-up (39.4 standard deviation). N=28
 
-
 Using the values from Hoolohan et al. (2013) for weighted average of meat (processed and cooked) of 13.61kgCO2eq/kg and assuming replacement by vegetarian meat alternatives (at 4.81kgCO2eq/kg) gives 8.8kgCO2eq/kg of meat. Although the control group is itself a type of intervention (information provided to discourage meat consumption) we subtract control from intervention so that we can also report the study's measure of significance, thereby providing a conservative estimate.
 
 Intervention reduced meat by 50.3g in the 2nd follow-up period
