@@ -51,7 +51,9 @@ red*48*5
 
 Average emissions saved per meal are therefore 0.21kgCO2e. Over the course of a year (assuming 48 work weeks of visiting the cafeteria and 5 meals a week) this would create emissions reductions of 50.4kgCO2e per year.
 
-\*\*CARFORA 2017 Carfora defines 2 medium portions as 200g. We therefore take their reported portions per week and multiply by 100g per portion. We assume substitution of red meat - average of beef 24.98kgCO2e/kg and pork 10.29kgCO2e/kg (17.64kgCO2e/kg) by poultry (4.05kgCO2e/kg) for a difference of 13.59kgCO2e/kg (since unlike Klockner they emphasize not reducing meat by reducing red meat)
+\*\*Carfora et al. 2017
+
+Carfora defines 2 medium portions as 200g. We therefore take their reported portions per week and multiply by 100g per portion. We assume substitution of red meat - average of beef 24.98kgCO2e/kg and pork 10.29kgCO2e/kg (17.64kgCO2e/kg) by poultry (4.05kgCO2e/kg) for a difference of 13.59kgCO2e/kg (since unlike Klockner they emphasize not reducing meat by reducing red meat)
 
 CONTROL MEAN DECREASE PER WEEK
 
@@ -80,13 +82,7 @@ SMS_mean_decrease*52 #Find mean annual emissions reduction
 
     ## [1] 90455.04
 
-``` r
-100*(3.13-1.74-0.23)
-```
-
-    ## [1] 116
-
-Mean red meat reduction of 116g per week compared to control Mean red meat emissions reduction of 90.46kgCO2e/year (p&lt;0.001)
+Mean red meat emissions reduction of 90.46kgCO2e/year (p&lt;0.001)
 
 \*\*Friis 2017 Assume 1/3 recipe is beef based on recipe from: <https://www.bbcgoodfood.com/recipes/3228/chilli-con-carne> (authors did not reply to email)
 
@@ -125,7 +121,9 @@ Assuming one meal, five times a day, and 48 weeks of work creates emissions redu
 
 Notes: Took place in a lab that reproduced the settings of a campus canteen. The researchers measured consumption minus wastage whereas our ideal measurement would just be consumption. Benefited from actual instead of self-reported measurements. Subjects may have adjusted behavior from being aware that they were being studied.
 
-\*\*KLOCKNER 2017 In the paper Klockner suggest that "Study 2" may be subject to bias due to an extremely low response rate, and instead view Study 3 as more reliable. We therefore draw results from Study 3, comparing intervention groups to the control group. We assume that beef consumption is replaced by vegetarian meat alternatives (24.98-4.81=20.17kgCO2e/kg beef reduced)
+\*\*Klockner and Ofstad 2017
+
+In the paper Klockner suggest that "Study 2" may be subject to bias due to an extremely low response rate, and instead view Study 3 as more reliable. We therefore draw results from Study 3, comparing intervention groups to the control group. We assume that beef consumption is replaced by vegetarian meat alternatives (24.98-4.81=20.17kgCO2e/kg beef reduced)
 
 ``` r
 #MEAN TAILORED INFO MINUS CONTROL
@@ -178,7 +176,9 @@ The random information group increased beef consumption by 23.57g/week increased
 
 Only the all information group changed by a significant amount compared to the control group (and it increased beef consumption).
 
-\*\*Loy (2016) Information only (control) reduced consumption of meat by 27g at the second follow-up (39.4 standard deviation). N=28
+\*\*Loy et al. (2016)
+
+Information only (control) reduced consumption of meat by 27g at the second follow-up (39.4 standard deviation). N=28
 
 Using the values from Hoolohan et al. (2013) for weighted average of meat (processed and cooked) of 13.61kgCO2eq/kg and assuming replacement by vegetarian meat alternatives (at 4.81kgCO2eq/kg) gives 8.8kgCO2eq/kg of meat. Although the control group is itself a type of intervention (information provided to discourage meat consumption) we subtract control from intervention so that we can also report the study's measure of significance, thereby providing a conservative estimate.
 
