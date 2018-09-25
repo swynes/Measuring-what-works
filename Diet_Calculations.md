@@ -84,7 +84,9 @@ SMS_mean_decrease*52 #Find mean annual emissions reduction
 
 Mean red meat emissions reduction of 90.46kgCO2e/year (p&lt;0.001)
 
-\*\*Friis 2017 Assume 1/3 recipe is beef based on recipe from: <https://www.bbcgoodfood.com/recipes/3228/chilli-con-carne> (authors did not reply to email)
+\*\*Friis et al. 2017
+
+Assume 1/3 recipe is beef based on recipe from: <https://www.bbcgoodfood.com/recipes/3228/chilli-con-carne> (authors did not reply to email)
 
 Default group, con carne decreases by 17.54g = 5.85g beef x 24.98gCO2e = 146.13gCO2e p =0.41 Priming group, con carne decreases by 115.59g = 38.53g beef x24.98gCO2e = 962.48gCO2e p&lt;0.01 Perceived variety group, con carne decreases by 82.67g = 27.56g of beef = 688.45gCO2e p&lt;0.01
 
