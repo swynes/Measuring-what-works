@@ -9,7 +9,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Food calculations use life cycle emissions for beef as presented in Hillborn et al. 2018 and for other foods Hoolohan et al. (2013)
+Food calculations use life cycle emissions for beef as presented in Hilborn et al. 2018 and for other foods Hoolohan et al. (2013)
 
 ```{r}
 beef<- 24.98
