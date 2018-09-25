@@ -86,40 +86,6 @@ SMS_mean_decrease*52 #Find mean annual emissions reduction
 
 Mean red meat reduction of 116g per week compared to control Mean red meat emissions reduction of 90.46kgCO2e/year (p&lt;0.001)
 
-\*\*CORNELIUS 2014
-
-Meat consumption in the treatment group increases from 7.23 to 8.10 servings per week (0.87) Meat consumption in the control group increases from 7.37 servings per week to 7.62 (0.25)
-
-``` r
-0.87-0.25
-```
-
-    ## [1] 0.62
-
-Compared to the control group, meat increases 0.62 servings per week. We assume 100g per serving and assume that the increased meat (average meat emissions of 13.61kgCO2e/kg of meat) is coming at the expense of vegetarian meat alternatives (4.81kgCo2e/kg )
-
-``` r
-13.61-4.81 #Find emissions intensity factor
-```
-
-    ## [1] 8.8
-
-``` r
-0.62*100*8.8 #Find weekly emissions savings
-```
-
-    ## [1] 545.6
-
-``` r
-0.62*100*8.8*52 #Find annual savings
-```
-
-    ## [1] 28371.2
-
-There was therefore a non-significant increase of 0.5456kgCo2e/week, or 28.37kgCO2e increase per year
-
-HOWEVER THEIR SERVINGS PER WEEK SCALE IS NOT LINEAR (see note h in Table 3) AND THEREFORE THESE RESULTS ARE EXCLUDED.
-
 \*\*Friis 2017 Assume 1/3 recipe is beef based on recipe from: <https://www.bbcgoodfood.com/recipes/3228/chilli-con-carne> (authors did not reply to email)
 
 Default group, con carne decreases by 17.54g = 5.85g beef x 24.98gCO2e = 146.13gCO2e p =0.41 Priming group, con carne decreases by 115.59g = 38.53g beef x24.98gCO2e = 962.48gCO2e p&lt;0.01 Perceived variety group, con carne decreases by 82.67g = 27.56g of beef = 688.45gCO2e p&lt;0.01
