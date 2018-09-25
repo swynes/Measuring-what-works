@@ -36,6 +36,8 @@ The intervention reduces emissions by 19kgCO2e per year.
 
 
 **Brunner et al. 2018
+
+
 The design of this experiment is rather complicated with the intervention impact assessed over a time period with a changing menu. The authors provide an expected average emissions for food with three different labels and the actual average emissions calculated after the intervention. To find the effect of the intervention we use "Expected Label" - "Label". Due to a lack of information on what portion of emissions come from red, green or yellow labelled meals we take only the red, which provides a generous estimate of effect.
 
 ```{r}
